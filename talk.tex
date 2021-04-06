@@ -3,6 +3,8 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 
+\newcommand{\dif}{\ensuremath{\operatorname{d}\!}}
+
 \usetheme{CambridgeUS}
 
 \title[Prime Strings]{Prime Numbers Containing a Given String of Digits}
@@ -147,6 +149,43 @@
 \end{frame}
 
 \subsection{Reciprocals of the Primes}
+
+\begin{frame}
+    \frametitle{The Sum of the Reciprocals of the Prime Numbers Diverges}
+
+    \begin{itemize}
+        \item Consider the series
+        \[
+            \sum_{p \text{ prime}} \frac{1}{p} = \sum_{n = 1}^{\infty} \frac{1}{p_n}.   
+        \] \pause
+        \item If one is willing to use the Prime Number Theorem, then by the limit comparison test, this sum converges if and only if
+        \[
+            \sum_{n = 1}^{\infty} \frac{1}{n \ln n}    
+        \]
+        does.
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Sum of the Reciprocals of the Prime Numbers Diverges}
+
+    \begin{itemize}
+        \item In turn, by the integral test, this sum converges if and only if the integral
+        \[
+            \int_2^\infty \frac{1}{x \ln x} \dif x    
+        \]
+        converges. \pause
+        \item But
+        \[
+            \int_2^\infty \frac{1}{x \ln x} \dif x = \ln(\ln x) \Big|_{2}^{\infty} \to \infty
+        \]
+        and so the sum of the reciprocals of the prime numbers diverges.
+    
+    \end{itemize}    
+
+\end{frame}
+
 \subsection{Reciprocals of Primes With a Prime Number of Digits}
 \subsection{A Generalisation}
 
