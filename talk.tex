@@ -107,6 +107,45 @@
 
 \section{Prime Numbers}
 \subsection{The Prime Number Theorem}
+
+\begin{frame}
+    \frametitle{The Prime Number Theorem}
+
+    \begin{itemize}
+        \item In his talk on 1 April 2021, Lourens introduced the \emph{Prime Number Theorem}:
+        \begin{theorem}[The Prime Number Theorem]
+            Let $\pi(x)$ denote the number of prime numbers that are less than or equal to the real number $x$. Then
+            \[
+                \pi(x) \sim \frac{x}{\ln x}.    
+            \]
+            In other words,
+            \[
+                \lim_{x \to \infty} \pi(x) \Big\slash \frac{x}{\ln x} = 1.
+            \]
+        \end{theorem}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Prime Number Theorem}
+
+    \begin{itemize}
+        \item Formally, this means that for every $\varepsilon > 0$, there exists $N > 0$ such that
+        \[
+            (1 - \varepsilon) \frac{x}{\ln x} \leq \pi(x) \leq (1 + \varepsilon) \frac{x}{\ln x}    
+        \]
+        whenever $x > N$. \pause
+        \item One consequence of this is that if $p_n$ is the $n^\text{th}$ prime number, then $p_n \sim n \ln n$. \pause
+        \item Indeed, since $\pi(p_n) = n$, we have that
+        \[
+            \lim_{n \to \infty} \frac{p_n}{n \ln n} = \lim_{n \to \infty} \frac{\ln p_n}{\ln n} \times \frac{p_n}{\ln p_n} \Big\slash \pi(p_n).
+        \]
+        \item It is possible to show in an elementary way that $\lim_{n \to \infty} \ln p_n \slash \ln n = 1$, from which the result follows.
+    \end{itemize} 
+
+\end{frame}
+
 \subsection{Reciprocals of the Primes}
 \subsection{Reciprocals of Primes With a Prime Number of Digits}
 \subsection{A Generalisation}
