@@ -22,6 +22,85 @@
 
 \frame{\titlepage}
 
+\section{Background}
+
+\begin{frame}
+    \frametitle{Reddit Post}
+
+    \begin{itemize}
+        \item On 4 April 2016, a \href{https://www.reddit.com/r/math/comments/4d879s/most_surprising_divergent_series/}{thread was posted to /r/math on reddit} asking for the most surprising examples of divergent series.
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.25\textwidth]{reddit_thread.png}
+            \caption{\url{https://www.reddit.com/r/math/comments/4d879s/most_surprising_divergent_series/}}
+        \end{figure}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reddit Post — Primes with a Prime Number of Digits}
+
+    \begin{itemize}
+        \item In one example, we consider the set of prime numbers with a prime number of digits. \pause
+        \item It is claimed that the sum of the reciprocals of the elements in this set diverges.
+    \end{itemize} 
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.25\textwidth]{reddit_prime_number_of_digits.png}
+        \caption{\url{https://www.reddit.com/r/math/comments/4d879s/most_surprising_divergent_series/d1oppgu}}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reddit Post — Numbers Without a $9$}
+
+    \begin{itemize}
+        \item In another example, we consider all of the positive integers that \emph{do not} have a $9$ \emph{anywhere} in their decimal expansion. \pause
+        \item In this case, it is claimed that the sum of the reciprocals of these numbers \emph{converges}!
+    \end{itemize} 
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.25\textwidth]{reddit_kempner.png}
+        \caption{\url{https://www.reddit.com/r/math/comments/4d879s/most_surprising_divergent_series/d1olh0o}}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Combining these Results}
+
+    \begin{itemize}
+        \item I realised that a combination of (appropriate generalisations) of these two claims implies that there are infinitely many primes which have a prime number of digits, and which contain any given string of decimal digits that you like. \pause
+        \item And of course I promptly told everyone I know. \pause
+        \item I even wrote a blog post about it!
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.25\textwidth]{mathemafrica_link.png}
+            \caption{\url{http://www.mathemafrica.org/?p=12942}}
+        \end{figure}
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{This Talk}
+
+    \begin{itemize}
+        \item In this talk, we will prove this result following the argument presented in the blog post. \pause
+        \item \emph{BUT}... by considering convergent and divergent series, the blog post is needlessly circuitous. \pause
+        \item It is possible to give a more direct proof of a stronger result:
+        \begin{block}{Proposition}
+            Given a string of digits $S$, there is some natural number $N$, such that for all $n > N$, there is a prime with $n$ digits that starts with $S$. (Or by some non-zero digit followed by $S$.)
+        \end{block} \pause
+        \item I will present a proof of this more general proposition towards the end of the talk.
+    \end{itemize}    
+
+\end{frame}
+
 \section{Numbers Without Given Digits}
 \subsection{The Harmonic Series Diverges}
 \subsection{Reciprocals of the Primes}
