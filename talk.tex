@@ -143,7 +143,70 @@
         \[
             \lim_{n \to \infty} \frac{p_n}{n \ln n} = \lim_{n \to \infty} \frac{\ln p_n}{\ln n} \times \frac{p_n}{\ln p_n} \Big\slash \pi(p_n).
         \]
-        \item It is possible to show in an elementary way that $\lim_{n \to \infty} \ln p_n \slash \ln n = 1$, from which the result follows.
+        \pause
+        \item It is possible to show that $\lim_{n \to \infty} \ln p_n \slash \ln n = 1$, from which the result follows.
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proving that $\lim_{n \to \infty} \ln p_n \slash \ln n = 1$}
+
+    \begin{itemize}
+        \item For all large enough $x$, we have that
+        \[
+            \frac{1}{2} \frac{x}{\ln x} \leq \pi(x)    
+        \]
+        and so for large enough $n$ we have that
+        \[
+            p_n \leq 2 n \ln p_n 
+        \]
+        which gives us that
+        \[
+            \ln p_n \leq \ln 2 + \ln n + \ln(\ln p_n).
+        \]
+        \pause
+        \item It is thus enough to show that
+        \[
+            \lim_{n \to \infty} \frac{\ln(\ln p_n)}{\ln n} = 0.    
+        \] 
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proving that $\lim_{n \to \infty} \ln(\ln p_n) \slash \ln n = 0$}
+
+    \begin{itemize}
+        \item Using our earlier estimate, we know that for large $n$,
+        \begin{align*}
+            \ln(\ln p_n) & \leq \ln\left(\ln 2 + \ln n + \ln(\ln p_n) \right) \\
+            & = \ln(\ln n) + \ln\left(\frac{\ln 2}{\ln n} + 1 + \frac{\ln(\ln p_n)}{\ln n}\right)
+        \end{align*}
+        and so it is enough to show that
+        \[
+            \frac{\ln(\ln p_n)}{\ln n}
+        \]
+        is bounded.
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proving that $\ln(\ln p_n) \slash \ln n$ is bounded}
+
+    \begin{itemize}
+        \item If you ask me nicely, I'll prove that $p_n < 4^n$ for all $n$. \pause
+        \item It follows that
+        \[
+            \ln(\ln p_n) < \ln\left(\ln\left( 4^n \right)\right) = \ln\left( n \ln 4 \right) = \ln n + \ln(\ln 4).
+        \]
+        \pause
+        \item Thus
+        \[
+            \frac{\ln(\ln p_n)}{\ln n} < 1 + \frac{\ln(\ln 4)}{\ln n}    
+        \]
+        which is bounded.
     \end{itemize} 
 
 \end{frame}
