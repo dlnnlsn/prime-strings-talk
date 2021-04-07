@@ -339,6 +339,24 @@
 
 \section{Putting it All Together}
 
+\begin{frame}
+    \frametitle{Combining these Results}
+
+    \begin{itemize}
+        \item Let $S$ be some string of decimal digits. \pause
+        \item As before, $S_n$ is the set of primes where the number of digits is prime, the number of digits of the number of digits is prime, and so on. \pause
+        \item Let $\mathbb{N}_S$ be the set of natural numbers that contain $S$ somewhere in their decimal expansion. \pause
+        \item Suppose that $S_n \cap \mathbb{N}_S$ is finite. Then there is some natural number $N$ such that if $p > N$ and $p \in S_n$, we have that $p \not\in \mathbb{N}_S$. \pause
+        \item It follows that
+        \[
+            \sum_{\substack{p > N\\ p \in S_n}} \frac{1}{p} \leq \sum_{\substack{p > N\\ p \not\in \mathbb{N}_S}} \frac{1}{p}.
+        \]
+        \pause
+        \item But the sum on the left diverges, while the sum on the right converges. A contradiction!
+    \end{itemize}
+
+\end{frame}
+
 \section{A More Direct Proof}
 
 \section{Try It Out Yourself}
