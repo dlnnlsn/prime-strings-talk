@@ -250,7 +250,92 @@
 \end{frame}
 
 \subsection{Reciprocals of Primes With a Prime Number of Digits}
-\subsection{A Generalisation}
+
+\begin{frame}
+    \frametitle{A Generalisation}
+
+    \begin{itemize}
+        \item We will show that the sum of the reciprocals of the primes with a prime number of digits diverges. \pause
+        \item In fact, we can prove an even more general result:
+        \begin{block}{Proposition}
+            Let $S_0$ be the set of natural numbers, and for each $n > 0$, let $S_n$ be the set of prime numbers $p$ where the number of digits in the decimal expansion of $p$ is in $S_{n - 1}$. Then
+            \[
+                \sum_{p \in S_n} \frac{1}{p}    
+            \]
+            diverges.
+        \end{block}
+        \pause
+        \item In particular, the fact that $\sum_{p \in S_2} 1\slash p$ diverges tells us that there are infinitely many prime numbers with a prime number of digits.
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof}
+
+    We prove the result by induction on $n$. \pause
+    For $n = 1$, the claim is that the harmonic series diverges, which we have already shown. \pause
+    Suppose that
+    \[
+       \sum_{p \in S_n} \frac{1}{p}
+    \]
+    diverges.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof}
+
+    Let $P_k$ be the set of prime numbers with $k$ digits. Then
+    \[
+       \sum_{p \in S_{n + 1}} \frac{1}{p} = \sum_{k \in S_n} \sum_{p \in P_k} \frac{1}{p} \geq \sum_{k \in S_n} \frac{\left| P_k \right|}{10^{k}}.
+    \]
+    \pause
+    It is thus sufficient to show that there is some constant $C$ such that
+    \[
+       \frac{\left| P_k \right|}{10^{k}} \geq \frac{C}{k}    
+    \]
+    for all large enough $k$.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof}
+
+    By the Prime Number Theorem, there is some natural number $N$ such that
+    \[
+        \frac{1}{2} \frac{m}{\ln m} < \pi(m) < \frac{3}{2} \frac{m}{\ln m}    
+    \]
+    whenever $m > N$.
+
+    In particular, if $10^{k - 1} > N$, then we have that
+    \[
+        \pi\left( 10^{k - 1} \right) < \frac{3}{2} \frac{10^{k - 1}}{(k - 1) \ln 10}
+    \]
+    and
+    \[
+        \pi\left( 10^k \right) > \frac{1}{2} \frac{10^k}{k \ln 10}.
+    \]
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof}
+
+    For such a $k$, we have that
+    \begin{align*}
+        \frac{\left| P_k \right|}{10^{k}} & = \frac{\pi\left( 10^{k} \right) - \pi\left( 10^{k - 1} \right)}{10^{k}} \\
+        & > \frac{1}{10^k} \left( \frac{1}{2} \frac{10^k}{k \ln 10} - \frac{3}{2} \frac{10^{k - 1}}{(k - 1) \ln 10} \right) \\
+        & = \frac{1}{20 \ln 10}\frac{10(k - 1) - 3k}{k(k - 1)} = \frac{1}{20 \ln 10} \frac{7k - 10}{k(k - 1)}.
+    \end{align*}
+    \pause
+    For any constant $A < 7$, we have that $7k - 10 > A(k - 1)$ provided that $k$ is large enough, and then taking $C = \frac{1}{20 \ln 10}$, we have that
+    \[
+        \frac{\left| P_k \right|}{10^{k}} > \frac{C}{k}
+    \]
+    for all large enough $k$.
+
+\end{frame}
 
 \section{Putting it All Together}
 
