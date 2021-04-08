@@ -196,7 +196,7 @@
             \sum_{n \not\in \mathbb{N}_S} \frac{1}{n} \leq \sum_{k = 0}^{\infty} \frac{\left( 10^m - 1 \right)^{k + 1}}{10^{km}}
         \]
         \pause
-        \item  since
+        \item Since
         \[
             \frac{10^m - 1}{10^m} < 1,
         \]
@@ -377,7 +377,7 @@
     \frametitle{Proof}
 
     We prove the result by induction on $n$. \pause
-    For $n = 1$, the claim is that the harmonic series diverges, which we have already shown. \pause
+    For $n = 0$, the claim is that the harmonic series diverges, which we have already shown. \pause
     Suppose that
     \[
        \sum_{p \in S_n} \frac{1}{p}
@@ -481,7 +481,7 @@
 
     \begin{itemize}
         \item Let $m$ be the natural number whose decimal representation is $S$. If $S$ starts with a $0$, instead let $m$ be the number whose decimal representation is $1$ followed by $S$. \pause
-        \item We want to show that for all large enough natural numbers $n$, there is a prime between $10^k m$ and $10^{k + 1} m - 1$. \pause
+        \item We want to show that for all large enough natural numbers $n$, there is a prime between $10^n m$ and $10^{n + 1} m - 1$. \pause
         \item Equivalently, we want to show that
         \[
             \pi\left( 10^{n + 1} m - 1\right) - \pi\left( 10^n m - 1 \right) > 0
@@ -533,7 +533,7 @@
             & = 7n \ln 10 + 7 \ln m - 3 \ln 10
         \end{align*}
         which is positive for all positive integers $n$. \pause
-        \item It follows that as long as $n$ is large enough that $x = 10^n$ satisfies the bound
+        \item It follows that as long as $n$ is large enough that $x = 10^n m$ satisfies the bound
         \[
             \frac{1}{2} \frac{x}{\ln x} < \pi(x) < \frac{3}{2} \frac{x}{\ln x},
         \]
