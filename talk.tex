@@ -462,6 +462,86 @@
 
 \section{A More Direct Proof}
 
+\begin{frame}
+    \frametitle{A More General Result}
+
+    \begin{itemize}
+        \item The fact that there are infinitely many prime numbers that have a prime number of digits and that contain your phone number somewhere among their digits is also a consequence of the following more general result.
+        \begin{block}{Proposition}
+            Given a string of digits $S$, there is some natural number $N$, such that for all $n > N$, there is a prime with $n$ digits that starts with $S$. (Or by some non-zero digit followed by $S$.)
+        \end{block} 
+        \pause
+        \item This shows that having a prime number of digits isn't special. There is an appropriate prime number with almost every number of digits.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof}
+
+    \begin{itemize}
+        \item Let $m$ be the natural number whose decimal representation is $S$. If $S$ starts with a $0$, instead let $m$ be the number whose decimal representation is $1$ followed by $S$. \pause
+        \item We want to show that for all large enough natural numbers $n$, there is a prime between $10^k m$ and $10^{k + 1} m - 1$. \pause
+        \item Equivalently, we want to show that
+        \[
+            \pi\left( 10^{n + 1} m - 1\right) - \pi\left( 10^n m - 1 \right) > 0
+        \]
+        for all large enough $n$. \pause
+        \item Since $10^n m$ is never prime, this is the same as proving that
+        \[
+            \pi\left( 10^{n + 1} m \right) - \pi\left( 10^n m \right) > 0.
+        \]
+    \end{itemize}    
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof}
+
+    \begin{itemize}
+        \item For all large enough $x$, we know that
+        \[
+            \frac{1}{2} \frac{x}{\ln x} < \pi(x) < \frac{3}{2} \frac{x}{\ln x}.
+        \]
+        \pause
+        \item It follows that for all large enough $n$, we have that
+        \[
+            \pi\left( 10^{n + 1} m \right) - \pi\left( 10^n m \right) > \frac{1}{2} \frac{10^{n + 1} m}{\ln\left( 10^{n + 1} m \right)} - \frac{3}{2} \frac{10^n m}{\ln\left( 10^n m \right)}.
+        \]
+        \pause
+        \item We wish to show that this is positive for large enough $n$. Since
+        \[
+            \frac{10^n m}{2 \ln\left( 10^{n + 1} m \right) \ln\left( 10^n m \right)}    
+        \]
+        is positive, this is equivalent to showing that
+        \[
+            10 \ln\left( 10^n m \right) - 3 \ln\left( 10^{n + 1} m \right)    
+        \]
+        is positive for large $n$.
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Proof}
+
+    \begin{itemize}
+        \item We have that
+        \begin{align*}
+            10 \ln\left( 10^n m \right) & - 3 \ln\left( 10^{n + 1} m \right) \\
+            & = 10\left( n \ln 10 + \ln m \right) - 3\left( (n + 1) \ln 10  + \ln m \right) \\
+            & = 7n \ln 10 + 7 \ln m - 3 \ln 10
+        \end{align*}
+        which is positive for all positive integers $n$. \pause
+        \item It follows that as long as $n$ is large enough $x = 10^n$ satisfies the bound
+        \[
+            \frac{1}{2} \frac{x}{\ln x} < \pi(x) < \frac{3}{2} \frac{x}{\ln x},
+        \]
+        we have that there is a prime with $n + \operatorname{length}(S)$ (possibly $+ 1$) digits that starts either with $S$, or with $1$ followed by $S$.
+    \end{itemize} 
+
+\end{frame}
+
 \section{Try It Out Yourself}
 
 \begin{frame}
