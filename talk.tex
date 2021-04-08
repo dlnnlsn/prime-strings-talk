@@ -105,6 +105,41 @@
 
 \section{The Harmonic and the Kempner Series}
 \subsection{The Harmonic Series Diverges}
+
+\begin{frame}
+    \frametitle{The Harmonic Series}
+
+    \begin{itemize}
+        \item One of the first somewhat surprising examples of a divergent series that students are shown is the \emph{Harmonic Series}
+        \[
+            \sum_{n = 1}^{\infty} \frac{1}{n}.    
+        \]
+        \item To show that this diverges, we group the terms in blocks of sizes equal to powers of $2$, and then approximate each term by the smallest element in its block.
+        \begin{align*}
+            \sum_{n = 1}^{\infty} \frac{1}{n} & = 1 + \sum_{n = 0}^{\infty} \sum_{k = 2^n + 1}^{2^{n + 1}} \frac{1}{k} \geq 1 + \sum_{n = 0}^\infty \sum_{k = 2^n + 1}^{2^{n + 1}} \frac{1}{2^{n + 1}} \\
+            & = 1 + \sum_{n = 0}^{\infty} \frac{2^n}{2^{n + 1}} = 1 + \sum_{n = 0}^{\infty} \frac{1}{2}.
+        \end{align*}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Harmonic Series}
+
+    \begin{itemize}
+        \item We of course get different behaviour if we sum the reciprocals of some subset of the natural numbers. \pause
+        \item The sum of the reciprocals of the powers of $2$ converges:
+        \[
+            \sum_{n = 0}^{\infty} \frac{1}{2^n} = 2.    
+        \]
+        \pause
+        \item The sum of the reciprocals of the prime numbers diverges. \pause
+        \item If we consider only the numbers that do not have a $9$ in their decimal expansion, the sum of the reciprocals of these numbers \emph{converges}. \pause
+        \item This feels surprising because it seems like there should be relatively few primes and many, many numbers without a $9$ in their decimal expansion, but exactly the opposite is true.
+    \end{itemize}
+
+\end{frame}
+
 \subsection{Reciprocals of Numbers Without a Given String of Digits}
 
 \section{Prime Numbers}
