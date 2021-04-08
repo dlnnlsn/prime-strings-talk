@@ -142,6 +142,74 @@
 
 \subsection{Reciprocals of Numbers Without a Given String of Digits}
 
+\begin{frame}
+    \frametitle{Reciprocals of Numbers Without a Given String of Digits}
+
+    \begin{itemize}
+        \item Let $S$ be any string of digits. Let $\mathbb{N}_S$ be the set of natural numbers that contain $S$ (contiguously) somewhere in their digits. \pause
+        \item We will show that
+        \[
+            \sum_{n \not\in \mathbb{N}_S} \frac{1}{n}    
+        \]
+        converges. \pause
+        \item The approach will be similar to showing that the harmonic series diverges: we will group the digits in blocks of powers of $10^{\text{length of } S}$ and approximate the summands in each block by the largest element in the block.
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reciprocals of Numbers Without a Given String of Digits}
+
+    \begin{itemize}
+        \item Let $m$ be the length of $S$. We group together the numbers with between $km + 1$ and $(k + 1)m$ digits for some $k \geq 0$.
+        \[
+            \sum_{n \not\in \mathbb{N}_S} \frac{1}{n} = \sum_{k = 0}^{\infty} \left( \sum_{\substack{10^{km} \leq n < 10^{km + 1} \\ n \not\in \mathbb{N}_S}} \frac{1}{n} \right) \leq \sum_{k = 0}^{\infty} \left( \sum_{\substack{10^{km} \leq n < 10^{km + 1} \\ n \not\in \mathbb{N}_S}} \frac{1}{10^{km}} \right)
+        \]
+        \pause
+        \item To bound the size of this sum, we need an estimate for how many numbers with between $km + 1$ and $(k + 1)m$ digits do not contain $S$. 
+    \end{itemize}    
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Estimating the Cardinality}
+
+    \begin{itemize}
+        \item Consider a number $n$ with between $km + 1$ and $(k + 1)m$ digits, and suppose that $n$ does not contain $S$ in its digits. \pause
+        \item Break the digits of $n$ up into $k + 1$ consecutive blocks of $m$ digits. (One of the blocks may have fewer than $m$ digits) \pause
+        \item There are $10^m$ possible blocks of $m$ digits. Each block of digits of $n$ can be any one of these possibilities \emph{except} for $S$. \pause
+        \item There are thus at most
+        \[
+            \left( 10^m - 1 \right)^{k + 1}    
+        \]
+        possible values of $n$.
+    \end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bounding the Sum}
+
+    \begin{itemize}
+        \item We see that
+        \[
+            \sum_{n \not\in \mathbb{N}_S} \frac{1}{n} \leq \sum_{k = 0}^{\infty} \frac{\left( 10^m - 1 \right)^{k + 1}}{10^{km}}
+        \]
+        \pause
+        \item  since
+        \[
+            \frac{10^m - 1}{10^m} < 1,
+        \]
+        this is a geometric series, and converges!
+    \end{itemize}
+    \pause
+    \begin{align*}
+        \sum_{k = 0}^{\infty} \frac{\left( 10^m - 1 \right)^{k + 1}}{10^{km}} & = \left( 10^m - 1 \right) \sum_{k = 0}^{\infty} \left( \frac{10^m - 1}{10^m} \right)^k \\
+        & = \left( 10^m - 1 \right) \frac{1}{1 - \frac{10^m - 1}{10^m}} = 10^m \left( 10^m - 1 \right)
+    \end{align*}
+
+\end{frame}
+
 \section{Prime Numbers}
 \subsection{The Prime Number Theorem}
 
