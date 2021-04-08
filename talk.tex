@@ -46,7 +46,7 @@
     \begin{itemize}
         \item In one example, we consider the set of prime numbers with a prime number of digits. \pause
         \item It is claimed that the sum of the reciprocals of the elements in this set diverges.
-    \end{itemize} 
+    \end{itemize}
 
     \begin{figure}
         \centering
@@ -62,7 +62,7 @@
     \begin{itemize}
         \item In another example, we consider all of the positive integers that \emph{do not} have a $9$ \emph{anywhere} in their decimal expansion. \pause
         \item In this case, it is claimed that the sum of the reciprocals of these numbers \emph{converges}!
-    \end{itemize} 
+    \end{itemize}
 
     \begin{figure}
         \centering
@@ -85,7 +85,7 @@
             \caption{\url{http://www.mathemafrica.org/?p=12942}}
         \end{figure}
     \end{itemize}
-    
+
 \end{frame}
 
 \begin{frame}
@@ -99,7 +99,7 @@
             Given a string of digits $S$, there is some natural number $N$, such that for all $n > N$, there is a prime with $n$ digits that starts with $S$. (Or by some non-zero digit followed by $S$.)
         \end{block} \pause
         \item I will present a proof of this more general proposition towards the end of the talk.
-    \end{itemize}    
+    \end{itemize}
 
 \end{frame}
 
@@ -112,7 +112,7 @@
     \begin{itemize}
         \item One of the first somewhat surprising examples of a divergent series that students are shown is the \emph{Harmonic Series}
         \[
-            \sum_{n = 1}^{\infty} \frac{1}{n}.    
+            \sum_{n = 1}^{\infty} \frac{1}{n}.
         \]
         \item To show that this diverges, we group the terms in blocks of sizes equal to powers of $2$, and then approximate each term by the smallest element in its block.
         \begin{align*}
@@ -130,7 +130,7 @@
         \item We of course get different behaviour if we sum the reciprocals of some subset of the natural numbers. \pause
         \item The sum of the reciprocals of the powers of $2$ converges:
         \[
-            \sum_{n = 0}^{\infty} \frac{1}{2^n} = 2.    
+            \sum_{n = 0}^{\infty} \frac{1}{2^n} = 2.
         \]
         \pause
         \item The sum of the reciprocals of the prime numbers diverges. \pause
@@ -149,11 +149,11 @@
         \item Let $S$ be any string of digits. Let $\mathbb{N}_S$ be the set of natural numbers that contain $S$ (contiguously) somewhere in their digits. \pause
         \item We will show that
         \[
-            \sum_{n \not\in \mathbb{N}_S} \frac{1}{n}    
+            \sum_{n \not\in \mathbb{N}_S} \frac{1}{n}
         \]
         converges. \pause
         \item The approach will be similar to showing that the harmonic series diverges: we will group the digits in blocks of powers of $10^{\text{length of } S}$ and approximate the summands in each block by the largest element in the block.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -166,8 +166,8 @@
             \sum_{n \not\in \mathbb{N}_S} \frac{1}{n} = \sum_{k = 0}^{\infty} \left( \sum_{\substack{10^{km} \leq n < 10^{km + 1} \\ n \not\in \mathbb{N}_S}} \frac{1}{n} \right) \leq \sum_{k = 0}^{\infty} \left( \sum_{\substack{10^{km} \leq n < 10^{km + 1} \\ n \not\in \mathbb{N}_S}} \frac{1}{10^{km}} \right)
         \]
         \pause
-        \item To bound the size of this sum, we need an estimate for how many numbers with between $km + 1$ and $(k + 1)m$ digits do not contain $S$. 
-    \end{itemize}    
+        \item To bound the size of this sum, we need an estimate for how many numbers with between $km + 1$ and $(k + 1)m$ digits do not contain $S$.
+    \end{itemize}
 
 \end{frame}
 
@@ -180,10 +180,10 @@
         \item There are $10^m$ possible blocks of $m$ digits. Each block of digits of $n$ can be any one of these possibilities \emph{except} for $S$. \pause
         \item There are thus at most
         \[
-            \left( 10^m - 1 \right)^{k + 1}    
+            \left( 10^m - 1 \right)^{k + 1}
         \]
         possible values of $n$.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -221,7 +221,7 @@
         \begin{theorem}[The Prime Number Theorem]
             Let $\pi(x)$ denote the number of prime numbers that are less than or equal to the real number $x$. Then
             \[
-                \pi(x) \sim \frac{x}{\ln x}.    
+                \pi(x) \sim \frac{x}{\ln x}.
             \]
             In other words,
             \[
@@ -238,7 +238,7 @@
     \begin{itemize}
         \item Formally, this means that for every $\varepsilon > 0$, there exists $N > 0$ such that
         \[
-            (1 - \varepsilon) \frac{x}{\ln x} \leq \pi(x) \leq (1 + \varepsilon) \frac{x}{\ln x}    
+            (1 - \varepsilon) \frac{x}{\ln x} \leq \pi(x) \leq (1 + \varepsilon) \frac{x}{\ln x}
         \]
         whenever $x > N$. \pause
         \item One consequence of this is that if $p_n$ is the $n^\text{th}$ prime number, then $p_n \sim n \ln n$. \pause
@@ -248,7 +248,7 @@
         \]
         \pause
         \item It is possible to show that $\lim_{n \to \infty} \ln p_n \slash \ln n = 1$, from which the result follows.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -258,11 +258,11 @@
     \begin{itemize}
         \item For all large enough $x$, we have that
         \[
-            \frac{1}{2} \frac{x}{\ln x} \leq \pi(x)    
+            \frac{1}{2} \frac{x}{\ln x} \leq \pi(x)
         \]
         and so for large enough $n$ we have that
         \[
-            p_n \leq 2 n \ln p_n 
+            p_n \leq 2 n \ln p_n
         \]
         which gives us that
         \[
@@ -271,9 +271,9 @@
         \pause
         \item It is thus enough to show that
         \[
-            \lim_{n \to \infty} \frac{\ln(\ln p_n)}{\ln n} = 0.    
-        \] 
-    \end{itemize} 
+            \lim_{n \to \infty} \frac{\ln(\ln p_n)}{\ln n} = 0.
+        \]
+    \end{itemize}
 
 \end{frame}
 
@@ -291,7 +291,7 @@
             \frac{\ln(\ln p_n)}{\ln n}
         \]
         is bounded.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -307,10 +307,10 @@
         \pause
         \item Thus
         \[
-            \frac{\ln(\ln p_n)}{\ln n} < 1 + \frac{\ln(\ln 4)}{\ln n}    
+            \frac{\ln(\ln p_n)}{\ln n} < 1 + \frac{\ln(\ln 4)}{\ln n}
         \]
         which is bounded.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -322,14 +322,14 @@
     \begin{itemize}
         \item Consider the series
         \[
-            \sum_{p \text{ prime}} \frac{1}{p} = \sum_{n = 1}^{\infty} \frac{1}{p_n}.   
+            \sum_{p \text{ prime}} \frac{1}{p} = \sum_{n = 1}^{\infty} \frac{1}{p_n}.
         \] \pause
         \item If one is willing to use the Prime Number Theorem, then by the limit comparison test, this sum converges if and only if
         \[
-            \sum_{n = 1}^{\infty} \frac{1}{n \ln n}    
+            \sum_{n = 1}^{\infty} \frac{1}{n \ln n}
         \]
         does.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -339,7 +339,7 @@
     \begin{itemize}
         \item In turn, by the integral test, this sum converges if and only if the integral
         \[
-            \int_2^\infty \frac{1}{x \ln x} \dif x    
+            \int_2^\infty \frac{1}{x \ln x} \dif x
         \]
         converges. \pause
         \item But
@@ -347,8 +347,8 @@
             \int_2^\infty \frac{1}{x \ln x} \dif x = \ln(\ln x) \Big|_{2}^{\infty} \to \infty
         \]
         and so the sum of the reciprocals of the prime numbers diverges.
-    
-    \end{itemize}    
+
+    \end{itemize}
 
 \end{frame}
 
@@ -363,13 +363,13 @@
         \begin{block}{Proposition}
             Let $S_0$ be the set of natural numbers, and for each $n > 0$, let $S_n$ be the set of prime numbers $p$ where the number of digits in the decimal expansion of $p$ is in $S_{n - 1}$. Then
             \[
-                \sum_{p \in S_n} \frac{1}{p}    
+                \sum_{p \in S_n} \frac{1}{p}
             \]
             diverges.
         \end{block}
         \pause
         \item In particular, the fact that $\sum_{p \in S_2} 1\slash p$ diverges tells us that there are infinitely many prime numbers with a prime number of digits.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -396,7 +396,7 @@
     \pause
     It is thus sufficient to show that there is some constant $C$ such that
     \[
-       \frac{\left| P_k \right|}{10^{k}} \geq \frac{C}{k}    
+       \frac{\left| P_k \right|}{10^{k}} \geq \frac{C}{k}
     \]
     for all large enough $k$.
 
@@ -407,7 +407,7 @@
 
     By the Prime Number Theorem, there is some natural number $N$ such that
     \[
-        \frac{1}{2} \frac{m}{\ln m} < \pi(m) < \frac{3}{2} \frac{m}{\ln m}    
+        \frac{1}{2} \frac{m}{\ln m} < \pi(m) < \frac{3}{2} \frac{m}{\ln m}
     \]
     whenever $m > N$.
 
@@ -469,7 +469,7 @@
         \item The fact that there are infinitely many prime numbers that have a prime number of digits and that contain your phone number somewhere among their digits is also a consequence of the following more general result.
         \begin{block}{Proposition}
             Given a string of digits $S$, there is some natural number $N$, such that for all $n > N$, there is a prime with $n$ digits that starts with $S$. (Or by some non-zero digit followed by $S$.)
-        \end{block} 
+        \end{block}
         \pause
         \item This shows that having a prime number of digits isn't special. There is an appropriate prime number with almost every number of digits.
     \end{itemize}
@@ -491,7 +491,7 @@
         \[
             \pi\left( 10^{n + 1} m \right) - \pi\left( 10^n m \right) > 0.
         \]
-    \end{itemize}    
+    \end{itemize}
 
 \end{frame}
 
@@ -511,14 +511,14 @@
         \pause
         \item We wish to show that this is positive for large enough $n$. Since
         \[
-            \frac{10^n m}{2 \ln\left( 10^{n + 1} m \right) \ln\left( 10^n m \right)}    
+            \frac{10^n m}{2 \ln\left( 10^{n + 1} m \right) \ln\left( 10^n m \right)}
         \]
         is positive, this is equivalent to showing that
         \[
-            10 \ln\left( 10^n m \right) - 3 \ln\left( 10^{n + 1} m \right)    
+            10 \ln\left( 10^n m \right) - 3 \ln\left( 10^{n + 1} m \right)
         \]
         is positive for large $n$.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -538,7 +538,7 @@
             \frac{1}{2} \frac{x}{\ln x} < \pi(x) < \frac{3}{2} \frac{x}{\ln x},
         \]
         we have that there is a prime with $n + \operatorname{length}(S)$ (possibly $+ 1$) digits that starts either with $S$, or with $1$ followed by $S$.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -557,7 +557,7 @@
         \item For some of these bounds, much more elementary proofs are known. \pause
         \item Perhaps they can be explored in an upcoming talk \emph{``It's Prime Time $\infty$: Elementary Proofs of Prime Number Theorem-like Results.''} \pause
         \item They also happen to show up in the Honours course in Analytic Number Theory.
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
@@ -575,7 +575,7 @@
             \includegraphics[width=0.25\textwidth]{prime_strings.png}
             \caption{\url{https://dlnnlsn.github.io/prime-strings}}
         \end{figure}
-    \end{itemize} 
+    \end{itemize}
 
 \end{frame}
 
